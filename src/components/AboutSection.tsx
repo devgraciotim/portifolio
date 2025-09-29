@@ -71,7 +71,7 @@ const AboutSection = () => {
               <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/50">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="p-2 bg-accent/20 rounded-lg text-accent">
+                    <div className="p-2 rounded-lg text-white bg-gradient-primary">
                       {value.icon}
                     </div>
                     <h4 className="text-xl font-semibold">{value.title}</h4>

@@ -25,7 +25,7 @@ const Navigation = () => {
                 <Button 
                   variant={location.pathname === item.path ? "default" : "ghost"}
                   size="sm"
-                  className={location.pathname === item.path ? "bg-gradient-primary" : ""}
+                  className={location.pathname === item.path ? "bg-gradient-primary" : "hover:bg-gradient-primary"}
                 >
                   {item.icon}
                   <span className="ml-2 hidden sm:inline">{item.name}</span>
@@ -34,7 +34,7 @@ const Navigation = () => {
             ))}
             
             <HashLink smooth to="/portifolio#contato">
-              <Button variant="outline" size="sm" className="flex items-center">
+              <Button variant="outline" size="sm" className="flex items-center hover:bg-gradient-primary">
                 <Mail className="h-4 w-4" />
                 <span className="ml-2 hidden sm:inline">Contato</span>
               </Button>

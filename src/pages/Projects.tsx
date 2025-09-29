@@ -172,7 +172,7 @@ const Projects = () => {
 
             
             <Link to="/portifolio" onClick={() => window.scrollTo(0, 0)}>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="hover:bg-gradient-primary">
                 Conhecer Mais
               </Button>
             </Link>
