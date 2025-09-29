@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import { useLocation, Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" id="herosection">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-hero">
         <img 
@@ -35,12 +36,16 @@ const HeroSection = () => {
                 Entre em Contato
               </Button>
             </a>
-            <a href="/projetos">
-              <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10">
-                <Github className="mr-2 h-5 w-5" />
-                Ver Projetos
-              </Button>
-            </a>
+            <Link to="/projetos">
+    <Button
+      variant="outline"
+      size="lg"
+      className="border-primary/50 hover:bg-primary/10 flex items-center"
+    >
+      <Github className="mr-2 h-5 w-5" />
+      Ver Projetos
+    </Button>
+  </Link>
           </div>
           
           <div className="flex justify-center gap-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-800">

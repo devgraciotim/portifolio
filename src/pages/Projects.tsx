@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { ArrowLeft, Filter } from "lucide-react";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 // Import project images
 import projectPowerBI from "@/assets/project-powerbi.jpg";
@@ -82,7 +83,7 @@ const Projects = () => {
       <section className="pt-24 pb-12 bg-gradient-hero">
         <div className="container mx-auto px-6">
           <div className="flex items-center gap-4 mb-8">
-            <Link to="/">
+            <Link to="/portifolio">
               <Button variant="ghost" size="sm">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Voltar
@@ -162,12 +163,15 @@ const Projects = () => {
             Vamos conversar sobre como posso ajudar seu projeto.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/#contato">
+
+            <HashLink smooth to="/portifolio#contato">
               <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
                 Iniciar Conversa
               </Button>
-            </Link>
-            <Link to="/">
+            </HashLink>
+
+            
+            <Link to="/portifolio" onClick={() => window.scrollTo(0, 0)}>
               <Button variant="outline" size="lg">
                 Conhecer Mais
               </Button>
